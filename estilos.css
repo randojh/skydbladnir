@@ -1,0 +1,52 @@
+.slider{
+    width: 95%; /* ancho */
+    margin: auto; /* margen para mantenerlo centrado */
+    overflow: hidden; /* para ocultar los elementos que salen no se vean */
+}
+.slider ul{
+    display: flex; /* colocar las imagenes en una sola linea */
+    padding: 0; /*  para quitar el espacio (sangria) */
+    width: 400%; /* espacio para que esten las imagenes */
+
+    /* animar 
+    animation-name: cambio;
+    animation-duration: 20s;
+    animation-iteration-count: infinite; 
+    */
+    
+    animation: cambio 20s infinite alternate; 
+    /* <nombre_de_la_animacion> <tiempo> <repeticiones> <ida_y_vuelta>*/
+}
+.slider li{
+    width: 100%; /*  */
+    list-style: none; /* quitar los puntitos */
+}
+.slider img{
+    width: 100%; /* en caso las falten por rellenar espacios en blanco */
+}
+
+/* paradas ... (tiempo de visibilidad) */
+@keyframes cambio{
+
+    /*de 0 a 4 segundos muestra la primera imagen */
+    0% {margin-left: 0;}
+    20% {margin-left: 0;}
+
+    /* 1 segundo de transicion */
+
+    /*de 6 a 9 segundos muestra la primera imagen */
+    25% {margin-left: -100%;}
+    45% {margin-left: -100%;}
+    
+    /* 1 segundo de transicion */
+
+    /*de 11 a 14 segundos muestra la primera imagen */
+    50% {margin-left: -200%;}
+    70% {margin-left: -200%;}
+    
+    /* 1 segundo de transicion */
+
+    /*de 16 a 20 segundos muestra la primera imagen */
+    75% {margin-left: -300%;}
+    100% {margin-left: -300%;}
+}
